@@ -61,20 +61,7 @@ export default function Login() {
           staff operations and hospital administration built for healthcare institutions.
         </div>
 
-        <div className="auth-feature-list">
-          {[
-            'Role-based access for Admin, Staff and Patients',
-            'Real-time bed management and ER monitoring',
-            'Clinical notes, prescriptions and test results',
-            'Appointment scheduling and patient portal',
-            'Equipment tracking and maintenance logs',
-          ].map(t => (
-            <div key={t} className="auth-feature-item">
-              <div className="auth-feature-dot" />
-              {t}
-            </div>
-          ))}
-        </div>
+       
 
         <div className="auth-stats">
           {[['320+', 'Beds'], ['148', 'Staff'], ['24/7', 'ER Support']].map(([v, l]) => (
@@ -170,28 +157,8 @@ export default function Login() {
               Create account
             </Link>
           </div>
-
-          <div style={{ marginTop: 20, padding: '12px 14px', background: 'var(--bg-subtle)', border: '1px solid var(--border)', borderRadius: 'var(--r-sm)' }}>
-            <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--text-muted)', marginBottom: 6, textTransform: 'uppercase', letterSpacing: '0.8px' }}>
-              Access Level
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-              {[
-                ['Admin', 'admin@medcare.in', 'admin123'],
-                ['Staff / Doctor', 'staff@medcare.in', 'staff123'],
-                ['Patient', 'patient@medcare.in', 'patient123'],
-              ].map(([r, e, p]) => (
-                <div key={r} style={{ display: 'flex', gap: 8, fontSize: 11, color: 'var(--text-secondary)' }}>
-                  <span style={{ width: 80, fontWeight: 600 }}>{r}</span>
-                  <span className="mono">{e}</span>
-                  <span style={{ color: 'var(--text-muted)' }}>/</span>
-                  <span className="mono">{p}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 }
